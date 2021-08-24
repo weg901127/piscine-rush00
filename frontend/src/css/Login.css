@@ -1,0 +1,25 @@
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 10rem auto;
+}
+
+.form-control {
+    margin:0.2rem auto;
+}
+button.btn {
+    margin: 0.2rem auto;
+    background-color: hotpink !important;
+    border-color: hotpink !important;
+}
+a.btn {
+
+    margin: 0.2rem auto;
+    background-color: greenyellow !important;
+    border-color: greenyellow !important;
+}
+h1 {
+    margin: 0 auto;
+    align-self: center;
+    color: hotpink;
+}

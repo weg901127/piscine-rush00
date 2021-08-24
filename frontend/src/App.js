@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import { createGlobalStyle } from 'styled-components';
+import Template from './component/Template';
+import NavBar from './component/NavBar';
+import axios from "axios";
+import firebase from './firebase';
+import './App.css'
+import Routes from "./component/Routes";
+axios.defaults.baseURL = "http://127.0.0.1:3001";
+axios.defaults.withCredentials = true;
+const GlobalStyle = createGlobalStyle`
+  body {
+    background: #e9ecef;
+  }
+`;
+console.log(firebase);
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+<>
+    <GlobalStyle />
+    <section className='App'>
+      <NavBar />
+      <Template>
+        <Routes />
+      </Template> 
+    </section>
+</>
   );
 }
 
