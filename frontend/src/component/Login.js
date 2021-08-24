@@ -9,8 +9,8 @@ export default function Login() {
         <h1>로그인</h1>
             <Form.Control type="email" placeholder="name@example.com" />
             <Form.Control type="password" placeholder="Password" />
-            <Button type='submit'>로그인 가즈아ㅏㅏㅏ</Button>
-            <Button href='/register'>회원가입</Button>
+            <Button className="btn_login"href='/login'>로그인 가즈아ㅏㅏㅏ</Button>
+            <Button className="btn_register"href='/register'>회원가입</Button>
         </form>
         </>
     );
