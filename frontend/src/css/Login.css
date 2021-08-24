@@ -7,16 +7,17 @@ form {
 .form-control {
     margin:0.2rem auto;
 }
-button.btn {
-    margin: 0.2rem auto;
+a.btn_login {
     background-color: hotpink !important;
     border-color: hotpink !important;
+    margin: 0 0 auto !important;
+    margin-top: 1rem !important;
 }
-a.btn {
-
-    margin: 0.2rem auto;
+a.btn_register {
     background-color: greenyellow !important;
     border-color: greenyellow !important;
+    margin: 0 0 auto !important;
+    margin-top: 0.2rem !important;
 }
 h1 {
     margin: 0 auto;

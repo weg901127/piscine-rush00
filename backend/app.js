@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use(cors());
 
-// sequelize가 연결 되었는지 확인.
+// sequelize가 연결 되었는지 확인..
 sequelize.authenticate().then((res)=>{console.log("ok");} ).catch((err)=>{
     console.err(err);
 })
