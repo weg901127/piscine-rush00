@@ -1,0 +1,7 @@
+.loading {
+    margin: 0 auto !important;
+    margin-top: 10% !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

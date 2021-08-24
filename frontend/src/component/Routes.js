@@ -7,7 +7,7 @@ import Home from "./Home";
 import Profile from "./Profile";
 import Register from "./Register";
 import Logout from './Logout';
-
+import PostDetail from './PostDetail';
 const Routes = () => {
     return (
         <Switch>
@@ -18,6 +18,7 @@ const Routes = () => {
             <Route path="/register" component={Register} />
             <Route path="/logout" component={Logout} />
             <Route path="/new" component={NewPost} />
+            <Route path="/detail/:Id" component={PostDetail} />
         </Switch>
     );
 }
