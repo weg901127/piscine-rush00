@@ -17,7 +17,7 @@ app.use(cors());
 
 // sequelize가 연결 되었는지 확인.
 sequelize.authenticate().then((res)=>{console.log("ok");} ).catch((err)=>{
-    console.err(err);
+    console.error(err);
 })
 /*
 function send500Message(response) {
