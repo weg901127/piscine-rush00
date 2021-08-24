@@ -3,8 +3,8 @@ const { sequelize } = require('./models/index');
 const jwt = require("jsonwebtoken");
 const bcrypt = require('bcrypt');
 const bodyParser = require('body-parser');
-//const { values } = require('sequelize/types/lib/operators');
 require('dotenv').config();
+var cors = require('cors');
 
 let app = express();
 const router = express.Router();
@@ -13,13 +13,12 @@ const models = require('./models');
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false}));
+app.use(cors());
 
 // sequelize가 연결 되었는지 확인
 sequelize.authenticate().then((res)=>{console.log("ok");} ).catch((err)=>{
     console.err(err);
 })
-    
-
 /*
 function send500Message(response) {
     console.log('Error : 500');
@@ -54,16 +53,17 @@ const driver = () => {
 };
 
 const insertData = (req, res) => {
-    models.Users.create({email: req.body.email, password: req.body.password})
+    models.Users.create({email: req.body.data.email, pw: req.body.data.pw})
     .then(result => {
         console.log("insert data!!!!");
-        res.json(result);
+        //res.json(result);
     })
     .catch(err => {
         console.log("not insert data!!!!");
         console.error(err);
     })
 };
+
 /*
 let createToken = (id) => new Promise((resolve, reject) => {
     let token = jwt.sign({ id }, process.env.SECRET_KEY, { expiresIn: '30m'},
@@ -77,6 +77,7 @@ let createToken = (id) => new Promise((resolve, reject) => {
         })
 });
 */
+
 /*
 // check login
 function authStatusUI(req, res) {
@@ -97,10 +98,10 @@ app.get('/', function(req, res) {
 /*
 app.post('/register', (req, res)=> {
     let id;
-    let password;
+    let pw;
 
     id = post.id;
-    password = post.password;
+    pw = post.pw;
 })
 */
 app.post('/register', function(req, res) {
@@ -110,9 +111,11 @@ app.post('/register', function(req, res) {
         send500Message(res);
     }
     
+    
     else {
         
     }
+    res.status(200);
     */
     driver();
     insertData(req, res);
