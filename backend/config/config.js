@@ -6,7 +6,8 @@ const env = process.env;
     password: env.MYSQL_PASS,
     database: env.MYSQL_NAME,
     host: env.MYSQL_HOST,
-    dialect: env.MYSQL_DIALET
+    dialect: env.MYSQL_DIALET,
+    logging: false
   };
   const test = {
     username: env.MYSQL_USER,

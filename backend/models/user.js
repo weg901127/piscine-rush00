@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
             unique:true
         },
         pw:{
-            type:DataTypes.STRING(10),
+            type:DataTypes.STRING(100),
             allowNULL: false
         }},
         {
