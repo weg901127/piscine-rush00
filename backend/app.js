@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use(cors());
 
-// sequelize가 연결 되었는지 확인
+// sequelize가 연결 되었는지 확인.
 sequelize.authenticate().then((res)=>{console.log("ok");} ).catch((err)=>{
     console.err(err);
 })
@@ -64,7 +64,7 @@ const insertData = (req, res) => {
     })
 };
 
-/*
+
 let createToken = (id) => new Promise((resolve, reject) => {
     let token = jwt.sign({ id }, process.env.SECRET_KEY, { expiresIn: '30m'},
         function (err, token) {
@@ -76,7 +76,7 @@ let createToken = (id) => new Promise((resolve, reject) => {
             resolve(token);
         })
 });
-*/
+
 
 /*
 // check login
@@ -123,6 +123,10 @@ app.post('/register', function(req, res) {
     //console.log(req.body);
     //console.log(req.body.email);
    
+});
+
+app.post('/login', function(req, res) {
+    createToken();
 });
 /*
 app.get('/post/:id', function(req, res) {
